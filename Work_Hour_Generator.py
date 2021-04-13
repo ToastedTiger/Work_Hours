@@ -2,13 +2,13 @@
 # Author:       BM Dierks
 # Created:      2021/04/13
 # Last Edit:    2021/04/13
-# Description:  The intended purpose of this program is to generator random
+# Description:  The intended purpose of this script is to generator random
 #               work hours and Tasks for ASTER because I cant remember the 
 #               hours I worked over the last weeks(time is a weird concept 
 #               right now).
 #
-#               Script is currently limited as it will only create tasks and 
-#               hours for the current month and not for a set time period. I 
+#               The Script is currently limited as it will only create tasks 
+#               and hours for the current month and not for a set time period. 
 #               I may fix this in future but most likely not. No real point.
 # =============================================================================
 import random as rd
