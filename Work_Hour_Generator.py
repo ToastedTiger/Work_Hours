@@ -37,7 +37,7 @@ maxTasks = 4
 for i in range(td.day):
     # assigns the day and hour variables for each day 
     CurrDate = dt.datetime(td.year, td.month, i+1).date()
-    Hours = (minHours + round(2 * (maxHours - minHours) * rd.random(),0)) / 2
+    Hours = minHours + round(2 * (maxHours - minHours) * rd.random(),0) / 2
     
     # Populate tasks worked on
     Tasks = {}
