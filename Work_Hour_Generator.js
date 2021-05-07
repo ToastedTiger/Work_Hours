@@ -11,6 +11,10 @@
  //               and hours for the current month and not for a set time period. 
  //               I may fix this in future but most likely not. No real point.
  //
+ //               Note that Date object has the following input parameters:
+ //               Date(Year, Month, Day, Hour, Min, Sec) where Month is 0-indexed.
+ //               To get the current date and time leave all arguments blank.
+ //
  //               This is a replica of Work_Hour_Generator.py written in node.js
  //               however for the sake of learning.
  // =============================================================================
@@ -25,8 +29,10 @@ const Work = ['AD',   // Analysis/Design
             'DP',   // Data Analysis and Publication
             'SE']   // System Engineering
 
-// Today's Date
-const td = new Date()
+// Define start and end date
+const startDate = new Date(2021, 0, 1,0,0,0) 
+const endDate = new Date()                         // Leave arguments blank for today's date
+const timeSpan = (endDate-startDate)/(3600000*24)
 
 // Define min and max hours worked
 const maxHours = 12
@@ -35,10 +41,10 @@ const minHours = 2
 // Define max tasks worked per day
 const maxTasks = 4
 
-for (var i = 0; i < td.getDate(); i++)
+for (var i = 0; i <= timeSpan; i++)
     {
     // Assigns the day and hour vars for each day
-    var CurrDate = new Date(td.getFullYear(), td.getMonth(), i+2)
+    var CurrDate = new Date(startDate.getFullYear(), startDate.getMonth(), i+2)
     var Hours = minHours + Math.round(2 * (maxHours - minHours) * Math.random()) / 2
 
     // Populate tasks worked on
